@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srikanth Namoju</title>
+    <link rel="stylesheet" href="Polio.css">
+</head>
+<body>
+    <section id="home">
+        <div id="nav">
+            <div><a href="#home" id="Sri">Srikanth</a></div>
+            <div><a href="#home" id="Home1">Home</a></div>
+            <div><a href="#Aboutme">Aboutme</a></div>
+            <div><a href="#project_done">Project</a></div>
+            <div><a href="#Contact">Contact</a></div>
+        </div>
+    </section>
+
+    <!-- 1st page starts from here -->
+    <section id="home" class="scroll-animation">
+        <div id="Profile" class="scroll-animation">
+            <img src="Resume photo_1.jpg " alt="Profile" id="dp">
+        </div>
+        <div id="greet" class="scroll-animation">
+            <h3 id="hello"></h3>
+        </div>
+        <div id="aboutmyself" class="scroll-animation">
+            <p id="para1">Hi, I'm Srikanth, a BTech student at Jain University, Bangalore, specializing in Cloud Technology and Mobile Applications. I pride myself on being responsible and organized, and I'm eager to embark on my professional journey. I'm looking forward to securing a role where I can fully utilize my training and skills, contributing to the success of a forward-thinking company.</p>
+        </div>
+        <div id="resume_button" class="scroll-animation">
+            <a href="https://drive.google.com/file/d/1Q72D4hSrqVNK5Jgd1wXEHRsKxoq_YMP7/view?usp=drive_link" target="_blank" id="button1">My Resume</a>
+        </div>
+    </section>
+
+    <!-- About Me section starts from here -->
+    <section id="Aboutme" class="scroll-animation">
+        <div id="heading1">
+            <h2 id="inhead">ABOUT ME</h2>
+        </div>
+        <div id="about_me_container">
+            <div id="about_me_left" class="scroll-animation">
+                <div class="about_me_row">
+                    <div class="about_me_label">Full Name :</div>
+                    <div class="about_me_value">SRIKANTH NAMOJU</div>
+                </div>
+                <div class="about_me_row">
+                    <div class="about_me_label">Native place :</div>
+                    <div class="about_me_value">Ghanpur, Telangana</div>
+                </div>
+                <div class="about_me_row">
+                    <div class="about_me_label">Currently :</div>
+                    <div class="about_me_value">Student at Jain University, Bangalore</div>
+                </div>
+                <div class="about_me_row">
+                    <div class="about_me_label">Skills :</div>
+                    <div class="about_me_value">Java, C(Basics), HTML & CSS</div>
+                </div>
+                <div class="about_me_row">
+                    <div class="about_me_label">BTech percentage(%) :</div>
+                    <div class="about_me_value">81.32 (Up to 6th sem)</div>
+                </div>
+                <div class="about_me_row">
+                    <div class="about_me_label">Education :</div>
+                    <div class="about_me_value">2021-25</div>
+                </div>
+                <div class="about_me_row">
+                    <div class="about_me_label">Hobbies :</div>
+                    <div class="about_me_value">Listening Music, Diary writing, traveling</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project section -->
+    <section id="project_done" class="scroll-animation">
+        <div id="heading2">
+            <h2 id="inhead">PROJECT</h2>
+        </div>
+        <div id="Malicious" class="scroll-animation">
+            <p id="para2">Malicious Insiders</p>
+            <p id="disc1">I'm currently working on this project, this project is to detect the malicious insiders who stole or sell the sensitive data within an organization or outside the world</p>
+        </div>
+        <div id="cloudcomputing" class="scroll-animation">
+            <p id="para3">Resource allocation in cloud computing using Reinforcement Learning (RL)</p>
+            <p id="disc2">In cloud computing, resource allocation is a crucial process that aims to maximize the utilization of computational resources to effectively meet a range of needs. Conventional approaches frequently find it difficult to adjust to the complex and dynamic nature of cloud systems. A promising approach is provided by the machine learning subfield of reinforcement learning (RL), which allows systems to interact with the environment to learn the best resource allocation strategies.</p>
+        </div>
+        <div id="Portfolio" class="scroll-animation">
+            <p id="para4">Portfolio</p>
+            <p id="disc3">This Portfolio I developed using HTML and CSS. In this, I used the Box models, flex box concepts, and animation.</p>
+        </div>
+    </section>
+
+    <!-- Certifications section -->
+    <section id="certifications" class="scroll-animation">
+        <div id="heading3">
+            <h2 id="inhead2">CERTIFICATIONS</h2>
+        </div>
+        <div id="container-1" class="con">
+            <div id="cert-1" class="cert scroll-animation">
+                <img src="Srikanth namoju - Ybi Foundation certificate.jpg" alt="" class="cert-size">
+                <button class="view-button" onclick="viewCertificate('Srikanth namoju - Ybi Foundation certificate.jpg')">View</button>
+                <p><b class="cert_desc">Description:</b></p>
+                <p class="cert_desc">Ybi Foundation</p>
+            </div>
+            <div id="cert-2" class="cert scroll-animation">
+                <img src="Srikanth namoju - Java certificate.jpg" alt="" class="cert-size">
+                <button class="view-button" onclick="viewCertificate('Srikanth namoju - Java certificate.jpg')">View</button>
+                <p><b class="cert_desc">Description:</b></p>
+                <p class="cert_desc">Java Certificate</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="overlay" class="overlay" onclick="closeCertificate()">
+        <div class="overlay-content">
+            <span class="close-btn" onclick="closeCertificate()">&times;</span>
+            <img id="overlay-img" src="" alt="">
+        </div>
+    </div>
+
+    <!-- Contact section -->
+    <footer id="Contact" class="scroll-animation">
+        <div id="contact_box">
+            <h2 id="heading4" class="box1">Contact</h2>
+            <p id="contact_para" class="box1">I’m always eager to connect! If you have a project idea, a question about my work, or simply want to get in touch, don’t hesitate to reach out. You can contact me via email or connect through my social media channels. I look forward to collaborating with passionate individuals and exploring new opportunities together!</p>
+            <div id="mail" class="box1">
+                <a href="mailto:Srikanthnamoju06@gmail.com" id="link1">Srikanthnamoju06@gmail.com</a>
+                <p id="Phone">Phone: (+91) 6300406164</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const elements = document.querySelectorAll('.scroll-animation');
+
+        function checkVisibility() {
+            const windowHeight = window.innerHeight;
+            const scrollY = window.scrollY;
+
+            elements.forEach(el => {
+                const elTop = el.getBoundingClientRect().top + scrollY;
+                if (scrollY + windowHeight > elTop) {
+                    el.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        checkVisibility(); // Initial check
+
+        // Greeting based on time of day
+        const greetingElement = document.getElementById('hello');
+        const currentHour = new Date().getHours();
+
+        let greetingText;
+        if (currentHour < 12) {
+            greetingText = "Good Morning!";
+        } else if (currentHour < 18) {
+            greetingText = "Good Afternoon!";
+        } else {
+            greetingText = "Good Evening!";
+        }
+
+        greetingElement.textContent = greetingText;
+    });
+
+    // Sticky Navbar
+    window.addEventListener('scroll', function() {
+        const nav = document.getElementById('nav');
+        if (window.scrollY > 0) {
+            nav.classList.add('sticky');
+        } else {
+            nav.classList.remove('sticky');
+        }
+    });
+
+    // View Certificate Functionality
+    function viewCertificate(imgSrc) {
+        const overlay = document.getElementById('overlay');
+        const overlayImg = document.getElementById('overlay-img');
+        overlay.style.display = 'block';
+        overlayImg.src = imgSrc;
+    }
+
+    function closeCertificate() {
+        const overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+/* General Styles */
+* {
+    font-family: "Poppins", sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+.scroll-animation {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+}
+
+body {
+    background-color: #161513;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation Bar */
+#nav {
+    height: 90px;
+    background-color: #1e1e1d;
+    color: #a3a3a3;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    margin-inline: auto;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+
+#nav.sticky {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    color: #a3a3a3;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: white;
+}
+
+#Sri {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#Home1 {
+    margin-left: 200px;
+}
+
+/* 1st page Styles */
+#Profile {
+    display: flex;
+    width: 100%;
+    margin-top: 125px;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards 0.5s;
+}
+
+#dp {
+    width: 250px;
+    height: 250px;
+    border-radius: 150px;
+    margin-bottom: 0px;
+}
+
+#greet {
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards 1s;
+}
+
+#hello {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 56px;
+    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientAnimation 5s linear infinite;
+}
+
+#aboutmyself {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    color: #a3a3a3;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards 1.5s;
+}
+
+#para1 {
+    margin-left: 350px;
+    margin-right: 350px;
+    text-align: justify;
+}
+
+#resume_button {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#button1 {
+    display: inline-block;
+    height: 40px;
+    font-size: 1rem;
+    line-height: 1.125rem;
+    color: white;
+    background-color: transparent;
+    border-radius: 5rem;
+    border: 2px solid white;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+    padding: 0 20px;
+    vertical-align: middle;
+    line-height: 40px; /* Center text vertically */
+}
+
+#button1:hover {
+    background-color: white;
+    color: #161513;
+    cursor: pointer;
+}
+
+/* About Me section */
+#heading1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#inhead {
+    font-size: 32px;
+    color: white;
+}
+
+#about_me_container {
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards 2s;
+}
+
+#about_me_left, #about_me_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#about_me_left {
+    padding-right: 20px;
+}
+
+#about_me_right {
+    background-color: rgb(133, 107, 72);
+    padding-left: 20px;
+}
+
+.about_me_row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.about_me_label {
+    width: 270px;
+    text-align: right;
+    padding-right: 18px;
+    color: #a3a3a3;
+}
+
+.about_me_value {
+    width: 270px;
+    color: #a3a3a3;
+}
+
+/* Project Section */
+#heading2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+#Malicious, #cloudcomputing, #Portfolio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #a3a3a3;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 1s forwards;
+    animation-delay: 2.5s;
+}
+
+#para2, #para3, #para4 {
+    margin-left: 350px;
+    margin-right: 350px;
+    text-align: justify;
+    color: #ffffff;
+}
+
+#disc1, #disc2, #disc3 {
+    margin-left: 350px;
+    margin-right: 350px;
+    text-align: justify;
+    margin-top: 5px;
+    margin-bottom: 50px;
+}
+
+/* Certifications Section */
+#heading3 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+#container-1 {
+    margin-left: 350px;
+    margin-right: 350px;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+}
+
+.cert {
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.cert-size {
+    width: 340px;
+    height: auto;
+    transition: transform 0.3s ease;
+    border-radius: 5px;
+}
+
+.cert:hover .cert-size {
+    transform: scale(1.1); /* Enlarge the image */
+}
+
+.view-button {
+    display: none; /* Hide the button by default */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #a3a3a3;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* background-color: transparent; */
+    border: 2px solid black;
+}
+
+.cert:hover .view-button {
+    display: block;
+}
+
+.cert_desc {
+    color: #a3a3a3;
+}
+
+/* Overlay for certificate images */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.overlay-content img {
+    width: 100%;
+    height: auto;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Contact Section */
+#contact_box {
+    background-color: #1e1e1d;
+    justify-content: center;
+    text-align: justify;
+    color: #a3a3a3;
+}
+
+#heading4 {
+    padding-bottom: 15px;
+    padding-top: 100px;
+    font-size: 24px;
+    color: #ffffff;
+}
+
+#contact_para {
+    padding-bottom: 25px;
+}
+
+.box1 {
+    margin-left: 350px;
+    margin-right: 350px;
+    padding-bottom: 80px;
+}
+
+#link1 {
+    padding-bottom: 0%;
+    color: #ffffff;
+}
+
+#Phone {
+    padding-top: 0%;
+    color: #ffffff;
+}
+
+/* Keyframes for Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+/* Animation for scrolling elements */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
