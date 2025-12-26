@@ -1,25 +1,20 @@
 /* General Styles */
 * {
-    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-.scroll-animation {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.scroll-animation.visible {
-    opacity: 1;
-}
-
 body {
+    font-family: "Poppins", sans-serif;
     background-color: #161513;
-    margin: 0;
-    padding: 0;
+    color: #a3a3a3;
     overflow-x: hidden;
+    line-height: 1.6;
 }
 
 /* Navigation Bar */
@@ -31,54 +26,70 @@ body {
     align-items: center;
     justify-content: space-evenly;
     flex-flow: row wrap;
-    margin-inline: auto;
     position: fixed;
     width: 100%;
     top: 0;
+    left: 0;
     z-index: 1000;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 #nav.sticky {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    background-color: #1a1a19;
 }
 
-a {
+#nav a {
     color: #a3a3a3;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: color 0.3s ease;
+    font-weight: 400;
+    font-size: 1rem;
 }
 
-a:hover {
-    color: white;
+#nav a:hover {
+    color: #ffffff;
 }
 
 #Sri {
     color: #ffffff;
-    font-size: 1.2rem;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 #Home1 {
-    margin-left: 200px;
+    margin-left: 50px;
 }
 
-/* 1st page Styles */
+/* Home Section */
+#home {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 90px;
+}
+
 #Profile {
     display: flex;
     width: 100%;
-    margin-top: 125px;
+    margin-top: 50px;
     justify-content: center;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1s forwards 0.5s;
 }
 
 #dp {
     width: 250px;
     height: 250px;
-    border-radius: 150px;
-    margin-bottom: 0px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 24px rgba(255, 126, 95, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#dp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 32px rgba(255, 126, 95, 0.4);
 }
 
 #greet {
@@ -86,214 +97,268 @@ a:hover {
     display: flex;
     width: 100%;
     justify-content: center;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1s forwards 1s;
+    margin-top: 30px;
 }
 
 #hello {
-    margin-top: 15px;
-    margin-bottom: 5px;
-    font-size: 56px;
-    background-image: linear-gradient(to right, #ff7e5f, #feb47b);
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b, #ff7e5f);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    animation: gradientAnimation 5s linear infinite;
+    background-clip: text;
+    animation: gradientAnimation 4s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 #aboutmyself {
     display: flex;
     width: 100%;
     justify-content: center;
-    color: #a3a3a3;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1s forwards 1.5s;
+    margin-top: 30px;
+    padding: 0 20px;
 }
 
 #para1 {
-    margin-left: 350px;
-    margin-right: 350px;
-    text-align: justify;
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 1.1rem;
 }
 
 #resume_button {
+    margin-top: 40px;
     text-align: center;
-    margin-top: 20px;
 }
 
 #button1 {
     display: inline-block;
-    height: 40px;
+    padding: 12px 40px;
     font-size: 1rem;
-    line-height: 1.125rem;
+    font-weight: 600;
     color: white;
     background-color: transparent;
-    border-radius: 5rem;
+    border-radius: 50px;
     border: 2px solid white;
-    text-align: center;
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
-    padding: 0 20px;
-    vertical-align: middle;
-    line-height: 40px; /* Center text vertically */
+    transition: all 0.3s ease;
+    cursor: pointer;
 }
 
 #button1:hover {
     background-color: white;
     color: #161513;
-    cursor: pointer;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
 }
 
-/* About Me section */
+/* About Me Section */
+#Aboutme {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 20px;
+}
+
 #heading1 {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-bottom: 60px;
 }
 
-#inhead {
-    font-size: 32px;
+#inhead, #inhead2 {
+    font-size: 2.5rem;
+    font-weight: 700;
     color: white;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#inhead::after, #inhead2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #ff7e5f, #feb47b);
 }
 
 #about_me_container {
     display: flex;
     justify-content: center;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1s forwards 2s;
-}
-
-#about_me_left, #about_me_right {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    padding: 0 20px;
 }
 
 #about_me_left {
-    padding-right: 20px;
-}
-
-#about_me_right {
-    background-color: rgb(133, 107, 72);
-    padding-left: 20px;
+    max-width: 700px;
 }
 
 .about_me_row {
     display: flex;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: rgba(30, 30, 29, 0.5);
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.about_me_row:hover {
+    background-color: rgba(30, 30, 29, 0.8);
+    transform: translateX(10px);
 }
 
 .about_me_label {
-    width: 270px;
-    text-align: right;
-    padding-right: 18px;
-    color: #a3a3a3;
+    min-width: 200px;
+    font-weight: 600;
+    color: #feb47b;
 }
 
 .about_me_value {
-    width: 270px;
-    color: #a3a3a3;
+    flex: 1;
+    color: #ffffff;
 }
 
-/* Project Section */
+/* Projects Section */
+#project_done {
+    padding: 100px 20px;
+}
+
 #heading2 {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 60px;
 }
 
-#Malicious, #cloudcomputing, #Portfolio {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    color: #a3a3a3;
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeInUp 1s forwards;
-    animation-delay: 2.5s;
+#Portfolio, #Malicious, #cloudcomputing {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    padding: 30px;
+    background-color: rgba(30, 30, 29, 0.5);
+    border-radius: 12px;
+    border-left: 4px solid #ff7e5f;
+    transition: all 0.3s ease;
 }
 
-#para2, #para3, #para4 {
-    margin-left: 350px;
-    margin-right: 350px;
-    text-align: justify;
+#Portfolio:hover, #Malicious:hover, #cloudcomputing:hover {
+    background-color: rgba(30, 30, 29, 0.8);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#para2 {
+    font-size: 1.5rem;
+    font-weight: 600;
     color: #ffffff;
+    margin-bottom: 15px;
 }
 
 #disc1, #disc2, #disc3 {
-    margin-left: 350px;
-    margin-right: 350px;
     text-align: justify;
-    margin-top: 5px;
-    margin-bottom: 50px;
+    line-height: 1.8;
+    color: #a3a3a3;
 }
 
 /* Certifications Section */
+#certifications {
+    padding: 100px 20px;
+}
+
 #heading3 {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
-    margin-bottom: 25px;
-    color: #ffffff;
+    margin-bottom: 60px;
 }
 
 #container-1 {
-    margin-left: 350px;
-    margin-right: 350px;
     display: flex;
     justify-content: center;
-    text-align: justify;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .cert {
     position: relative;
-    display: inline-block;
-    margin: 20px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(30, 30, 29, 0.5);
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 400px;
+}
+
+.cert:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .cert-size {
-    width: 340px;
+    width: 100%;
+    max-width: 340px;
     height: auto;
+    border-radius: 8px;
     transition: transform 0.3s ease;
-    border-radius: 5px;
 }
 
 .cert:hover .cert-size {
-    transform: scale(1.1); /* Enlarge the image */
+    transform: scale(1.05);
 }
 
 .view-button {
-    display: none; /* Hide the button by default */
+    display: none;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #a3a3a3;
-    color: black;
+    background-color: rgba(255, 126, 95, 0.9);
+    color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 30px;
+    border-radius: 50px;
     cursor: pointer;
-    /* background-color: transparent; */
-    border: 2px solid black;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
 .cert:hover .view-button {
     display: block;
 }
 
-.cert_desc {
-    color: #a3a3a3;
+.view-button:hover {
+    background-color: #ff7e5f;
+    transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Overlay for certificate images */
+.cert_desc {
+    color: #a3a3a3;
+    margin-top: 15px;
+    text-align: center;
+}
+
+/* Certificate Overlay */
 .overlay {
     display: none;
     position: fixed;
@@ -301,96 +366,209 @@ a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.95);
     justify-content: center;
     align-items: center;
-    z-index: 1000;
+    z-index: 2000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .overlay-content {
     position: relative;
     max-width: 90%;
     max-height: 90%;
+    animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+    }
+    to {
+        transform: scale(1);
+    }
 }
 
 .overlay-content img {
     width: 100%;
     height: auto;
+    border-radius: 8px;
 }
 
 .close-btn {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    color: black;
+    top: -40px;
+    right: 0;
+    font-size: 40px;
+    color: white;
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+    color: #ff7e5f;
 }
 
 /* Contact Section */
-#contact_box {
+#Contact {
     background-color: #1e1e1d;
-    justify-content: center;
-    text-align: justify;
-    color: #a3a3a3;
+    padding: 100px 20px 80px;
+}
+
+#contact_box {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 #heading4 {
-    padding-bottom: 15px;
-    padding-top: 100px;
-    font-size: 24px;
+    font-size: 2.5rem;
+    font-weight: 700;
     color: #ffffff;
+    margin-bottom: 30px;
+    text-align: center;
 }
 
 #contact_para {
-    padding-bottom: 25px;
+    text-align: center;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
 }
 
-.box1 {
-    margin-left: 350px;
-    margin-right: 350px;
-    padding-bottom: 80px;
+#mail {
+    text-align: center;
 }
 
 #link1 {
-    padding-bottom: 0%;
-    color: #ffffff;
+    color: #ff7e5f;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#link1:hover {
+    color: #feb47b;
 }
 
 #Phone {
-    padding-top: 0%;
     color: #ffffff;
+    font-size: 1.1rem;
 }
 
-/* Keyframes for Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes gradientAnimation {
-    0% {
-        background-position: 0% 0%;
-    }
-    100% {
-        background-position: 100% 100%;
-    }
-}
-
-/* Animation for scrolling elements */
+/* Scroll Animations */
 .scroll-animation {
     opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .scroll-animation.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    #hello {
+        font-size: 2.8rem;
+    }
+    
+    #para1 {
+        max-width: 90%;
+    }
+    
+    #Home1 {
+        margin-left: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #nav {
+        height: auto;
+        padding: 15px 10px;
+    }
+    
+    #nav div {
+        margin: 5px 10px;
+    }
+    
+    #Home1 {
+        margin-left: 0;
+    }
+    
+    #hello {
+        font-size: 2.2rem;
+    }
+    
+    #dp {
+        width: 200px;
+        height: 200px;
+    }
+    
+    #para1 {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+    
+    .about_me_row {
+        flex-direction: column;
+    }
+    
+    .about_me_label {
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+    
+    #Portfolio, #Malicious, #cloudcomputing {
+        padding: 20px;
+    }
+    
+    #para2 {
+        font-size: 1.3rem;
+    }
+    
+    #container-1 {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #inhead, #inhead2, #heading4 {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #hello {
+        font-size: 1.8rem;
+    }
+    
+    #dp {
+        width: 150px;
+        height: 150px;
+    }
+    
+    #button1 {
+        padding: 10px 30px;
+        font-size: 0.9rem;
+    }
+    
+    #inhead, #inhead2, #heading4 {
+        font-size: 1.8rem;
+    }
+    
+    .cert-size {
+        max-width: 100%;
+    }
 }
