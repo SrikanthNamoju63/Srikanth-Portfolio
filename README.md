@@ -187,7 +187,7 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
 
 - GitHub: [@SrikanthNamoju63](https://github.com/SrikanthNamoju63)
 - Email: Srikanthnamoju06@gmail.com
-- LinkedIn: [Srikanth Namoju](https://www.linkedin.com/in/srikanth-namoju-463134222/)
+- LinkedIn: [Srikanth Namoju](https://www.linkedin.com/in/srikanth-namoju-7aa8ba2ba/)
 
 ## Acknowledgments
 
