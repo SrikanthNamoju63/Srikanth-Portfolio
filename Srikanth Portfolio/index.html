@@ -3,25 +3,58 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Srikanth Namoju - Portfolio</title>
-    <link rel="stylesheet" href="Polio.css">
+    <link rel="stylesheet" href="Polio.css?v=7">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <!-- Navigation Bar -->
     <nav id="nav">
-        <div><a href="#home" id="Sri">Srikanth</a></div>
-        <div><a href="#home" id="Home1">Home</a></div>
-        <div><a href="#Aboutme">About Me</a></div>
-        <div><a href="#education">Education</a></div>
-        <div><a href="#project_done">Projects</a></div>
-        <div><a href="#certifications">Certifications</a></div>
-        <div><a href="#Contact">Contact</a></div>
+        <div class="nav-inner">
+            <div class="nav-brand-box"><a href="#home" id="Sri">Srikanth</a></div>
+            <div class="nav-menu" id="navMenu">
+                <div><a href="#home" id="Home1" class="nav-link active">Home</a></div>
+                <div><a href="#Aboutme" class="nav-link">About Me</a></div>
+                <div><a href="#experience" class="nav-link">Experience</a></div>
+                <div><a href="#education" class="nav-link">Education</a></div>
+                <div><a href="#project_done" class="nav-link">Projects</a></div>
+                <div><a href="#certifications" class="nav-link">Certifications</a></div>
+                <div><a href="#Contact" class="nav-link">Contact</a></div>
+            </div>
+            <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
     </nav>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+        <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+        <div class="mobile-drawer-panel">
+            <div class="mobile-drawer-header">
+                <span class="mobile-drawer-brand">Srikanth Namoju</span>
+                <button id="closeDrawerBtn" class="drawer-close-btn" aria-label="Close Navigation Menu">&times;</button>
+            </div>
+            <div class="mobile-nav-links">
+                <a href="#home" class="mobile-nav-link active">Home</a>
+                <a href="#Aboutme" class="mobile-nav-link">About Me</a>
+                <a href="#experience" class="mobile-nav-link">Experience</a>
+                <a href="#education" class="mobile-nav-link">Education</a>
+                <a href="#project_done" class="mobile-nav-link">Projects</a>
+                <a href="#certifications" class="mobile-nav-link">Certifications</a>
+                <a href="#Contact" class="mobile-nav-link">Contact</a>
+            </div>
+            <div class="mobile-drawer-footer">
+                <a href="https://drive.google.com/file/d/1Q0TU-cQNLVocD_-lQK9QUGgjycUwVapI/view?usp=sharing" target="_blank" class="mobile-resume-btn">My Resume</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Home Section -->
     <section id="home">
@@ -32,10 +65,8 @@
             <h1 id="hello"></h1>
         </div>
         <div id="aboutmyself" class="scroll-animation">
-            <p id="para1">Hi, I'm Srikanth, a BTech graduate from Jain University, Bangalore, specializing in Cloud
-                Technology and Mobile Applications. I pride myself on being responsible and organized, and I'm eager to
-                embark on my professional journey. I'm looking forward to securing a role where I can fully utilize my
-                training and skills, contributing to the success of a forward-thinking company.</p>
+            <p id="para1">Hi, I'm Srikanth, currently working at Amazon. A BTech graduate from Jain University, Bangalore, specializing in Cloud
+                Technology and Mobile Applications. I pride myself on being responsible, organized, and passionate about building scalable, high-performance software solutions and exploring modern technologies.</p>
         </div>
         <div id="resume_button" class="scroll-animation">
             <a href="https://drive.google.com/file/d/1Q0TU-cQNLVocD_-lQK9QUGgjycUwVapI/view?usp=sharing" target="_blank"
@@ -55,29 +86,49 @@
                     <div class="about_me_value">SRIKANTH NAMOJU</div>
                 </div>
                 <div class="about_me_row">
+                    <div class="about_me_label">Company:</div>
+                    <div class="about_me_value">Amazon (Present)</div>
+                </div>
+                <div class="about_me_row">
                     <div class="about_me_label">Native Place:</div>
                     <div class="about_me_value">Ghanpur, Telangana</div>
                 </div>
                 <div class="about_me_row">
-                    <div class="about_me_label">Currently:</div>
-                    <div class="about_me_value">Graduate (B.Tech, 2025)</div>
+                    <div class="about_me_label">Education:</div>
+                    <div class="about_me_value">B.Tech (2021-2025), Jain University</div>
                 </div>
                 <div class="about_me_row">
                     <div class="about_me_label">Skills:</div>
-                    <div class="about_me_value">Java, MySQL, Mobile App Development, HTML & CSS</div>
+                    <div class="about_me_value">Java, MySQL, Mobile App Development, HTML & CSS, Cloud Technology</div>
                 </div>
                 <div class="about_me_row">
                     <div class="about_me_label">BTech Percentage:</div>
                     <div class="about_me_value">Passed with 86%, 2025</div>
                 </div>
                 <div class="about_me_row">
-                    <div class="about_me_label">Education:</div>
-                    <div class="about_me_value">2021-2025</div>
-                </div>
-                <div class="about_me_row">
                     <div class="about_me_label">Hobbies:</div>
                     <div class="about_me_value">Listening to Music, Diary Writing, Traveling</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="scroll-animation">
+        <div id="heading-exp">
+            <h2 id="inhead">EXPERIENCE</h2>
+        </div>
+        <div class="experience-container">
+            <div class="experience-card scroll-animation">
+                <div class="exp-brand">
+                    <div class="amazon-icon-wrapper">
+                        <img src="Amazon Logo.jpg" alt="Amazon Logo" class="amazon-logo-img">
+                    </div>
+                    <div class="exp-title-block">
+                        <h3 class="company-title">Amazon</h3>
+                    </div>
+                </div>
+                <div class="exp-status-text">Currently working here</div>
             </div>
         </div>
     </section>
@@ -202,7 +253,7 @@
 
     <!-- Certificate Overlay -->
     <div id="overlay" class="overlay" onclick="closeCertificate()">
-        <div class="overlay-content">
+        <div class="overlay-content" onclick="event.stopPropagation()">
             <span class="close-btn" onclick="closeCertificate()">&times;</span>
             <img id="overlay-img" src="" alt="Certificate Full View">
         </div>
@@ -218,7 +269,7 @@
                 and exploring new opportunities together!</p>
             <div id="mail" class="box1">
                 <a href="mailto:Srikanthnamoju06@gmail.com" id="link1">Srikanthnamoju06@gmail.com</a>
-                <p id="Phone">Phone: (+91) 6300406164</p>
+                <p id="Phone">Phone: <a href="tel:+916300406164" class="phone-link">(+91) 6300406164</a></p>
             </div>
 
             <!-- Social Accounts -->
@@ -245,76 +296,327 @@
 
     <!-- JavaScript -->
     <script>
+        // ==========================================
+        // Real-Time Device & Screen Detection Engine
+        // ==========================================
+        const DeviceEngine = (function () {
+            const docEl = document.documentElement;
+
+            function getBreakpoint(width) {
+                if (width < 480) return 'xs';       // Compact Smartphone (<480px)
+                if (width < 768) return 'sm';       // Standard Mobile (480-767px)
+                if (width <= 1024) return 'md';     // Tablet / Foldable (768-1024px)
+                if (width <= 1440) return 'lg';     // Laptop / Compact Desktop (1025-1440px)
+                if (width < 1920) return 'xl';      // Desktop / Monitor (1441-1919px)
+                return '2xl';                       // Ultra-Wide & 4K (>=1920px)
+            }
+
+            function getDeviceCategory(width, isTouch) {
+                const ua = navigator.userAgent.toLowerCase();
+                const isMobileUA = /android|webos|iphone|ipod|blackberry|iemobile|opera mini/i.test(ua);
+                const isTabletUA = /ipad|tablet|(android(?!.*mobile))/i.test(ua);
+
+                if (isTabletUA || (isTouch && width >= 768 && width <= 1024)) {
+                    return { name: 'Tablet', code: 'tablet', icon: '📱' };
+                }
+                if (isMobileUA || width < 768) {
+                    return { name: 'Mobile', code: 'mobile', icon: '📱' };
+                }
+                if (width <= 1440) {
+                    return { name: 'Laptop', code: 'laptop', icon: '💻' };
+                }
+                if (width < 1920) {
+                    return { name: 'Desktop', code: 'desktop', icon: '🖥️' };
+                }
+                return { name: 'Ultra-Wide', code: 'ultrawide', icon: '🖥️' };
+            }
+
+            function detectAndApply() {
+                const vw = window.innerWidth;
+                const vh = window.innerHeight;
+                const screenW = window.screen.width;
+                const screenH = window.screen.height;
+                const dpr = window.devicePixelRatio || 1;
+
+                // Touch and pointer capabilities
+                const hasTouch = (('ontouchstart' in window) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+                const hasCoarsePointer = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+                const hasFinePointer = window.matchMedia && window.matchMedia('(pointer: fine)').matches;
+
+                let inputType = 'Mouse / Pointer';
+                if (hasTouch && hasCoarsePointer) {
+                    inputType = 'Touch Screen';
+                } else if (hasTouch && hasFinePointer) {
+                    inputType = 'Hybrid (Touch + Mouse)';
+                } else if (hasTouch) {
+                    inputType = 'Touch Capable';
+                }
+
+                // Orientation
+                const isPortrait = vh >= vw;
+                const orientation = isPortrait ? 'portrait' : 'landscape';
+
+                // Breakpoint & Device Category
+                const breakpoint = getBreakpoint(vw);
+                const device = getDeviceCategory(vw, hasTouch);
+
+                // Set dynamic CSS custom properties for true mobile 100vh / fluid layouts
+                docEl.style.setProperty('--vh', `${vh * 0.01}px`);
+                docEl.style.setProperty('--vw', `${vw * 0.01}px`);
+                docEl.style.setProperty('--screen-w', `${vw}px`);
+                docEl.style.setProperty('--screen-h', `${vh}px`);
+
+                // Set dynamic HTML attributes for targeted CSS rules
+                docEl.setAttribute('data-device', device.code);
+                docEl.setAttribute('data-screen-size', breakpoint);
+                docEl.setAttribute('data-touch', hasTouch ? 'true' : 'false');
+                docEl.setAttribute('data-orientation', orientation);
+                docEl.setAttribute('data-retina', dpr >= 2 ? 'true' : 'false');
+            }
+
+            return {
+                init: function () {
+                    detectAndApply();
+
+                    // Throttled resize listener using requestAnimationFrame
+                    let resizeTimer = null;
+                    window.addEventListener('resize', () => {
+                        if (resizeTimer) cancelAnimationFrame(resizeTimer);
+                        resizeTimer = requestAnimationFrame(() => {
+                            detectAndApply();
+                        });
+                    }, { passive: true });
+
+                    window.addEventListener('orientationchange', () => {
+                        setTimeout(detectAndApply, 120);
+                    });
+                },
+                detect: detectAndApply
+            };
+        })();
+
+        // Run detection immediately to apply data-attributes before DOM painting
+        DeviceEngine.init();
+
         document.addEventListener("DOMContentLoaded", function () {
-            const elements = document.querySelectorAll('.scroll-animation');
+            // Re-sync detection once DOM is fully parsed
+            DeviceEngine.detect();
 
-            function checkVisibility() {
-                const windowHeight = window.innerHeight;
-                const scrollY = window.scrollY;
+            // High-Performance Smooth IntersectionObserver for Scroll Animations
+            const animatedElements = document.querySelectorAll('.scroll-animation');
+            if ('IntersectionObserver' in window) {
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px 0px -40px 0px',
+                    threshold: 0.12
+                };
 
-                elements.forEach(el => {
-                    const elTop = el.getBoundingClientRect().top + scrollY;
-                    if (scrollY + windowHeight > elTop + 100) {
-                        el.classList.add('visible');
+                const scrollObserver = new IntersectionObserver((entries, observer) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, observerOptions);
+
+                animatedElements.forEach(el => scrollObserver.observe(el));
+            } else {
+                animatedElements.forEach(el => el.classList.add('visible'));
+            }
+
+            // Dynamic Time Greeting
+            const greetingElement = document.getElementById('hello');
+            if (greetingElement) {
+                const currentHour = new Date().getHours();
+                let greetingText;
+                if (currentHour < 12) {
+                    greetingText = "Good Morning!";
+                } else if (currentHour < 18) {
+                    greetingText = "Good Afternoon!";
+                } else {
+                    greetingText = "Good Evening!";
+                }
+                greetingElement.textContent = greetingText;
+            }
+
+            // Navigation Elements
+            const nav = document.getElementById('nav');
+            const navLinks = document.querySelectorAll('#nav a.nav-link');
+            const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+            const sections = document.querySelectorAll('section, footer');
+
+            // Mobile Drawer Controls
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileDrawer = document.getElementById('mobileDrawer');
+            const closeDrawerBtn = document.getElementById('closeDrawerBtn');
+            const drawerBackdrop = document.getElementById('drawerBackdrop');
+
+            function openDrawer() {
+                if (!mobileDrawer) return;
+                mobileDrawer.classList.add('open');
+                mobileDrawer.setAttribute('aria-hidden', 'false');
+                if (hamburgerBtn) {
+                    hamburgerBtn.classList.add('active');
+                    hamburgerBtn.setAttribute('aria-expanded', 'true');
+                }
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeDrawer() {
+                if (!mobileDrawer) return;
+                mobileDrawer.classList.remove('open');
+                mobileDrawer.setAttribute('aria-hidden', 'true');
+                if (hamburgerBtn) {
+                    hamburgerBtn.classList.remove('active');
+                    hamburgerBtn.setAttribute('aria-expanded', 'false');
+                }
+                document.body.style.overflow = '';
+            }
+
+            if (hamburgerBtn) {
+                hamburgerBtn.addEventListener('click', function () {
+                    if (mobileDrawer && mobileDrawer.classList.contains('open')) {
+                        closeDrawer();
+                    } else {
+                        openDrawer();
                     }
                 });
             }
 
-            window.addEventListener('scroll', checkVisibility);
-            checkVisibility(); // Initial check
+            if (closeDrawerBtn) closeDrawerBtn.addEventListener('click', closeDrawer);
+            if (drawerBackdrop) drawerBackdrop.addEventListener('click', closeDrawer);
 
-            // Greeting based on time of day
-            const greetingElement = document.getElementById('hello');
-            const currentHour = new Date().getHours();
+            // Handle Mobile Links
+            mobileNavLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    closeDrawer();
+                    if (href && href.startsWith('#')) {
+                        const target = document.querySelector(href);
+                        if (target) {
+                            e.preventDefault();
+                            const navHeight = 70;
+                            const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight + 10;
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
 
-            let greetingText;
-            if (currentHour < 12) {
-                greetingText = "Good Morning!";
-            } else if (currentHour < 18) {
-                greetingText = "Good Afternoon!";
-            } else {
-                greetingText = "Good Evening!";
+            function handleScroll() {
+                const scrollY = window.scrollY;
+
+                // Sticky Navbar
+                if (scrollY > 40) {
+                    nav.classList.add('sticky');
+                } else {
+                    nav.classList.remove('sticky');
+                }
+
+                // Active Section Spy
+                let currentSectionId = '';
+                const navHeight = nav ? nav.offsetHeight : 80;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - navHeight - 60;
+                    const sectionHeight = section.offsetHeight;
+                    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                        currentSectionId = section.getAttribute('id');
+                    }
+                });
+
+                if (currentSectionId) {
+                    // Update Desktop Nav Links
+                    navLinks.forEach(link => {
+                        const href = link.getAttribute('href').replace('#', '');
+                        if (href === currentSectionId) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+
+                    // Update Mobile Nav Links
+                    mobileNavLinks.forEach(link => {
+                        const href = link.getAttribute('href').replace('#', '');
+                        if (href === currentSectionId) {
+                            link.classList.add('active');
+                        } else {
+                            link.classList.remove('active');
+                        }
+                    });
+                }
             }
 
-            greetingElement.textContent = greetingText;
+            // Throttled scroll listener using requestAnimationFrame
+            let isTicking = false;
+            window.addEventListener('scroll', function () {
+                if (!isTicking) {
+                    window.requestAnimationFrame(() => {
+                        handleScroll();
+                        isTicking = false;
+                    });
+                    isTicking = true;
+                }
+            }, { passive: true });
+
+            handleScroll();
+
+            // Smooth Scroll for Desktop Nav Links
+            navLinks.forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    if (href === '#') return;
+                    const target = document.querySelector(href);
+                    if (target) {
+                        e.preventDefault();
+                        const navHeight = nav ? nav.offsetHeight : 80;
+                        const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight + 10;
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Close on Escape Key
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeCertificate();
+                    closeDrawer();
+                }
+            });
         });
 
-        // Sticky Navbar
-        window.addEventListener('scroll', function () {
-            const nav = document.getElementById('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('sticky');
-            } else {
-                nav.classList.remove('sticky');
-            }
-        });
-
-        // View Certificate Functionality
+        // View Certificate Modal Functionality
         function viewCertificate(imgSrc) {
             const overlay = document.getElementById('overlay');
             const overlayImg = document.getElementById('overlay-img');
-            overlay.style.display = 'flex';
-            overlayImg.src = imgSrc;
+            if (overlay && overlayImg) {
+                overlayImg.src = imgSrc;
+                overlay.style.display = 'flex';
+                setTimeout(() => {
+                    overlay.classList.add('active');
+                }, 10);
+            }
         }
 
         function closeCertificate() {
             const overlay = document.getElementById('overlay');
-            overlay.style.display = 'none';
+            if (overlay) {
+                overlay.classList.remove('active');
+                setTimeout(() => {
+                    overlay.style.display = 'none';
+                    const overlayImg = document.getElementById('overlay-img');
+                    if (overlayImg) overlayImg.src = '';
+                }, 250);
+            }
         }
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
     </script>
 </body>
 
